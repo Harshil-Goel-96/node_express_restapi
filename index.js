@@ -1,6 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import usersRouter from "./routes/users.js";
+import axios from "axios";
 
 //Initialise app variable
 const app = express();
