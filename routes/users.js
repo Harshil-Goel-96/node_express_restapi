@@ -1,5 +1,5 @@
 import express from "express";
-import { getUsers, getUser, postUser, deleteUser, patchuser } from "../controllers/usersControllers.js";
+import { getUsers, getUser, postUser, deleteUser, patchuser, putUser } from "../controllers/usersControllers.js";
 
 //Create route for http://localhost:5000/users
 const router = express.Router();
@@ -15,5 +15,7 @@ router.post("/", postUser);
 router.delete("/:id", deleteUser);
 
 router.patch("/:id", patchuser);
+
+router.put("/:id", putUser);
 
 export default router;

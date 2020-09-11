@@ -41,3 +41,15 @@ export const patchuser = (req, res) => {
   }
   res.send(users);
 };
+
+export const putUser = (req, res) => {
+  const id = req.params.id;
+  users = users.map((user) => {
+    if (user.id === id) {
+      return { ...req.body, id };
+    } else {
+      return user;
+    }
+  });
+  res.send(users);
+};
